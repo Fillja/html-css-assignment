@@ -348,3 +348,157 @@ header .container .menu-bars {
   color: #7a7a7a;
   margin-bottom: 65px;
 }
+
+.contact-showcase {
+  background-color: #F0EFE9;
+  padding: 114px 0px;
+}
+.contact-showcase .container {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  text-align: center;
+}
+.contact-showcase .container a {
+  text-decoration: none;
+  color: #191919;
+  margin: 0px 20px;
+}
+.contact-showcase .container #home {
+  font-weight: 300;
+}
+.contact-showcase .container #contact {
+  font-weight: 500;
+}
+.contact-showcase .container h1 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+}
+
+.contact-form .info {
+  display: block;
+  margin-top: 120px;
+}
+@media (min-width: 992px) {
+  .contact-form .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.contact-form .info .columns {
+  display: grid;
+  grid-template-columns: auto auto;
+  border: 1px solid #afafaf;
+}
+@media (min-width: 992px) {
+  .contact-form .info .columns {
+    width: 370px;
+    height: 205px;
+  }
+}
+@media (min-width: 1400px) {
+  .contact-form .info .columns {
+    width: 420px;
+  }
+}
+.contact-form .info .columns h3 {
+  font-family: "DM sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.contact-form .info .columns i {
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #191919;
+  align-self: start;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  padding: 20px 15px 15px;
+  margin-left: 60px;
+  margin-top: 50px;
+}
+.contact-form .info .columns a {
+  display: block;
+  text-decoration: none;
+  color: #191919;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+@media (min-width: 1400px) {
+  .contact-form .info .columns a {
+    font-size: 18px;
+    margin-right: 100px;
+  }
+}
+.contact-form .info .columns a:hover {
+  background-color: #f9d783;
+  text-decoration: underline;
+}
+.contact-form .info .columns a p {
+  margin: 0px;
+}
+.contact-form .form-section {
+  background: #F0EFE9;
+  margin-top: 80px;
+  padding-bottom: 100px;
+}
+.contact-form .form-section h2 {
+  font-family: "DM sans", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 150px;
+}
+.contact-form .form-section form {
+  margin-top: 30px;
+  text-align: center;
+}
+.contact-form .form-section form #your-message {
+  padding-bottom: 160px;
+}
+.contact-form .form-section form label {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.contact-form .form-section form input {
+  padding: 20px;
+  border-radius: 40px;
+  border: hidden;
+}
+@media (min-width: 576px) {
+  .contact-form .form-section form input {
+    width: 460px;
+  }
+}
+@media (min-width: 768px) {
+  .contact-form .form-section form input {
+    width: 660px;
+  }
+}
+@media (min-width: 1200px) {
+  .contact-form .form-section form input {
+    width: 830px;
+  }
+}
+@media (min-width: 1400px) {
+  .contact-form .form-section form input {
+    width: 1020px;
+  }
+}
+.contact-form .form-section a {
+  text-align: center;
+  display: block;
+  margin: 45px 20px;
+}
+@media (min-width: 992px) {
+  .contact-form .form-section a {
+    margin: 45px 140px;
+  }
+}
