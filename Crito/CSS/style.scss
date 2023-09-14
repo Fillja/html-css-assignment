@@ -19,10 +19,16 @@ html, body{
         font-weight: 700;
     }
 
+    h4{
+        font-size: 20px;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 700;
+    }
 
+    // Ändrat storlek gentemot designen. Då det ej reflekterade bra på sidan.
     .orange-p{
-        font-size: 18px;
-        font-weight: 500;
+        font-size: 16px;
+        font-weight: 400;
         color: #F94D1C;
         margin-bottom: 10px;
     }
@@ -98,6 +104,12 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.end-content{
+    display: flex;
+    justify-content: end;
+    align-items: end;
 }
 
 header{
@@ -304,21 +316,10 @@ header{
 
     .container{
 
-        .sponsors{
+        .partners{
             display: flex;
             flex-direction: column; 
             align-items: center;
-
-            a{
-                &:hover{
-                    background-color: #f9d783;
-                }
-
-                @media (max-width: 992px){
-                margin-top: 20px;
-                margin-bottom: 20px;
-                }
-            }
 
             @media (min-width: 992px){
                 display: flex;
@@ -326,6 +327,17 @@ header{
                 align-items: center;
                 flex-direction: row;
                 margin: 100px 45px;
+            }
+
+            a{
+                &:hover{
+                    background-color: #f9d783;
+                }
+
+                @media (max-width: 992px){
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
             }
         }
 
@@ -343,7 +355,6 @@ header{
                 flex-direction: column;
 
                 @media (max-width: 992px){
-                    border-top: 1px solid #afafaf;
                     margin-top: 10px;
                 }
 
@@ -423,6 +434,215 @@ header{
     
 }
 
+.about-section{
+
+    .container{
+        display: flex;
+        justify-content: center;
+        margin-top: 120px;
+        margin-bottom: 120px;
+
+        @media (min-width: 1200px){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .samantha{
+            display: none;
+
+            @media(min-width: 1200px){
+                display: flex;
+            }
+
+            img{
+                position: absolute;
+                margin-left: 55px;
+                height: 500px;
+                width: auto;
+
+                @media(min-width: 1400px){
+                    width: auto;
+                    height: 615px;
+                }
+            }
+
+            .samantha-info{
+                position: absolute;
+                margin-top: 300px;
+                background-color: #BEEBFF;
+                width: 368px;
+                height: 180px;
+
+                @media(min-width: 1400px){
+                    margin-top: 395px;
+                }
+
+                div{
+                    margin-left: 20px;
+                    margin-top: 40px;
+
+                    h4{
+                        display: inline;
+                    }
+
+                    .orange-p{
+                        display: inline;
+                        font-family: 'DM Sans' sans-serif;
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+
+                    p{
+                        margin-top: 25px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        .about-company{
+            text-align: center;
+
+            @media (min-width: 1200px){
+                text-align: start;
+                margin-left: 200px;
+                width: 535px;
+            }
+
+            h2{
+                margin-top: 30px;
+                margin-bottom: 25px;
+            }
+
+            .lorem{
+                margin-top: 50px;
+                margin-bottom: 120px;
+            }
+
+            .btn-black{
+                display: block;
+                
+                @media (min-width: 576px){
+                    display: inline;
+                }
+            }
+
+            .video-button{
+                display: block;
+                text-decoration: none;
+                color: #191919;
+                font-weight: 600;
+                margin-bottom: 25px;
+                margin-top: 20px;
+
+                @media (min-width: 576px){
+                    display: inline;
+                }
+
+                i{
+                    border: 1px solid #191919;
+                    border-radius: 100%;
+                    width: 48px;
+                    height: 48px;
+                    padding: 15px;
+                    text-align: center;
+                    margin-left: 40px;
+                    margin-right: 20px;
+                }
+
+                &:hover{
+                    text-decoration: underline;
+                    i{
+                        color: white;
+                        background-color: #191919;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.services-section{
+    background-color: #F0EFE9;
+
+    .container{
+        padding: 120px 0px;
+        text-align: center;
+
+        @media(min-width: 1400px){
+            text-align: start;
+        }
+
+        .services-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin: 50px 0px;
+
+            @media (min-width: 992px){
+                display: grid;
+                grid-template-columns: auto auto;
+                margin-left: 100px;
+            }
+
+            @media (min-width: 1200px){
+                margin-left: 160px;
+            }
+
+            @media (min-width: 1400px){
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                margin-left: 0px;
+            }
+
+            a{
+                text-decoration: none;
+                color: #191919;
+
+                .services-links{
+                    background-color: white;
+                    width: 310px;
+                    height: 330px;
+                    padding: 45px 30px;
+
+                    .border-bit{
+                        width: 40px;
+                        height: 1px;
+                        background-color: #191919;
+                        margin-bottom: 45px;
+                    }
+
+                    p{
+                        font-weight: 200;
+                    }
+
+                    i{
+                        background-color: #191919;
+                        color: white;
+                        border-radius: 100%;
+                        padding-top: 18px;
+                        font-size: 20px;
+                        height: 56px;
+                        width: 56px;
+                        text-align: center;
+                    }
+
+                    &:hover{
+                        background-color: #f9d783;
+                        i{
+                            background-color: white;
+                            color: #191919;
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
 .projects-section{
 
     .container{
@@ -448,10 +668,23 @@ header{
             }
             
 
-            article{
+            a{
                 display: grid;
                 grid-template-columns: 1fr;
                 grid-template-rows: auto 1fr auto;
+                text-decoration: none;
+                color: #191919;
+
+                &:hover{
+                    background-color: #f9d783;
+
+                    p{
+                        text-decoration: underline;
+                    }
+                    h3{
+                        border-bottom: 1px solid #191919;
+                    }
+                }
 
                 img{
                     width: 100%;
@@ -464,7 +697,7 @@ header{
                     border-bottom: 1px solid #DAD9D3;
                 }
 
-                a{
+                p{
                     display: block;
                     text-align: right;
                     text-decoration: none;
