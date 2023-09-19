@@ -9,7 +9,12 @@ html, body {
 html h2, body h2 {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
-  font-size: 45px;
+  font-size: 35px;
+}
+@media (min-width: 768px) {
+  html h2, body h2 {
+    font-size: 45px;
+  }
 }
 html h3, body h3 {
   font-size: 22px;
@@ -27,6 +32,9 @@ html .orange-p, body .orange-p {
   color: #F94D1C;
   margin-bottom: 10px;
 }
+html .squiggly-lines, body .squiggly-lines {
+  position: absolute;
+}
 
 .btn-yellow {
   background-color: #f9d783;
@@ -36,7 +44,7 @@ html .orange-p, body .orange-p {
   padding: 15px 30px;
   font-weight: 600;
   font-size: 16px;
-  border-radius: 25px;
+  border-radius: 30px;
 }
 .btn-yellow i {
   margin-left: 8px;
@@ -56,7 +64,7 @@ html .orange-p, body .orange-p {
   padding: 15px 30px;
   font-weight: 600;
   font-size: 16px;
-  border-radius: 25px;
+  border-radius: 30px;
 }
 .btn-black i {
   margin-left: 8px;
@@ -76,7 +84,7 @@ html .orange-p, body .orange-p {
   padding: 15px 30px;
   font-weight: 600;
   font-size: 16px;
-  border-radius: 25px;
+  border-radius: 30px;
 }
 .btn-transparent i {
   margin-left: 8px;
@@ -212,6 +220,18 @@ header .container .menu-bars {
 
 .showcase-section {
   background-color: #F0EFE9;
+  position: relative;
+  z-index: 0;
+}
+.showcase-section .squiggly-lines {
+  display: none;
+  bottom: 0;
+  z-index: -1;
+}
+@media (min-width: 992px) {
+  .showcase-section .squiggly-lines {
+    display: inline;
+  }
 }
 .showcase-section .container {
   display: flex;
@@ -402,6 +422,7 @@ header .container .menu-bars {
 }
 .about-section .container .samantha {
   display: none;
+  position: relative;
 }
 @media (min-width: 1200px) {
   .about-section .container .samantha {
@@ -409,7 +430,6 @@ header .container .menu-bars {
   }
 }
 .about-section .container .samantha img {
-  position: absolute;
   margin-left: 55px;
   height: 500px;
   width: auto;
@@ -422,14 +442,14 @@ header .container .menu-bars {
 }
 .about-section .container .samantha .samantha-info {
   position: absolute;
-  margin-top: 300px;
+  bottom: 7rem;
   background-color: #BEEBFF;
   width: 368px;
   height: 180px;
 }
 @media (min-width: 1400px) {
   .about-section .container .samantha .samantha-info {
-    margin-top: 395px;
+    bottom: 2.5rem;
   }
 }
 .about-section .container .samantha .samantha-info div {
@@ -508,6 +528,13 @@ header .container .menu-bars {
 
 .services-section {
   background-color: #F0EFE9;
+  position: relative;
+  z-index: 0;
+}
+.services-section .squiggly-lines {
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }
 .services-section .container {
   padding: 120px 0px;
@@ -539,31 +566,30 @@ header .container .menu-bars {
 }
 @media (min-width: 1400px) {
   .services-section .container .services-box {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-left: 0px;
   }
 }
 .services-section .container .services-box a {
   text-decoration: none;
   color: #191919;
-}
-.services-section .container .services-box a .services-links {
   background-color: white;
   width: 310px;
   height: 330px;
   padding: 45px 30px;
 }
-.services-section .container .services-box a .services-links .border-bit {
+.services-section .container .services-box a .border-bit {
   width: 40px;
   height: 1px;
   background-color: #191919;
   margin-bottom: 45px;
 }
-.services-section .container .services-box a .services-links p {
+.services-section .container .services-box a p {
   font-weight: 200;
 }
-.services-section .container .services-box a .services-links i {
+.services-section .container .services-box a i {
   background-color: #191919;
   color: white;
   border-radius: 100%;
@@ -573,26 +599,55 @@ header .container .menu-bars {
   width: 56px;
   text-align: center;
 }
-.services-section .container .services-box a .services-links:hover {
+.services-section .container .services-box a:hover {
   background-color: #f9d783;
 }
-.services-section .container .services-box a .services-links:hover i {
+.services-section .container .services-box a:hover i {
   background-color: white;
   color: #191919;
 }
 
-.choose-us-section {
-  background-color: #F0EFE9;
-  background-image: linear-gradient(to bottom right, white 50%, rgba(0, 0, 0, 0) 20%);
+@media (min-width: 1200px) {
+  .choose-us-section {
+    background-color: white;
+    background-image: linear-gradient(to right, #F0EFE9 60%, rgba(0, 0, 0, 0) 20%);
+    background-size: 100% 70%;
+    background-position: 40dvw 100%;
+    background-repeat: no-repeat;
+  }
+}
+@media (min-width: 1400px) {
+  .choose-us-section {
+    background-position: 45dvw 100%;
+  }
 }
 .choose-us-section .container {
   display: flex;
   justify-content: space-between;
   margin-top: 60px;
 }
+@media (max-width: 1200px) {
+  .choose-us-section .container .why-choose-us {
+    margin: auto;
+  }
+}
 .choose-us-section .container .why-choose-us h2 {
+  text-align: center;
   max-width: 400px;
   margin-top: 25px;
+}
+@media (min-width: 1200px) {
+  .choose-us-section .container .why-choose-us h2 {
+    text-align: start;
+  }
+}
+.choose-us-section .container .why-choose-us .orange-p {
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .choose-us-section .container .why-choose-us .orange-p {
+    text-align: start;
+  }
 }
 .choose-us-section .container .why-choose-us .headlines {
   display: flex;
@@ -612,7 +667,13 @@ header .container .menu-bars {
   margin-right: 25px;
 }
 .choose-us-section .container .choose-us-image img {
+  display: none;
   margin-top: 50px;
+}
+@media (min-width: 1200px) {
+  .choose-us-section .container .choose-us-image img {
+    display: inline;
+  }
 }
 
 .projects-section .container .title-part {
@@ -676,6 +737,127 @@ header .container .menu-bars {
 .projects-section .container .center-content {
   margin-top: 50px;
   margin-bottom: 90px;
+}
+
+.meet-section {
+  background: #F0D082;
+  padding-top: 125px;
+  padding-bottom: 70px;
+}
+.meet-section .container .part-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding-bottom: 100px;
+}
+.meet-section .container .part-one h2 {
+  margin-top: 20px;
+}
+.meet-section .container .part-one .btn-transparent {
+  align-self: center;
+}
+@media (min-width: 1400px) {
+  .meet-section .container .part-one .btn-transparent {
+    align-self: end;
+    margin-bottom: 5px;
+  }
+}
+@media (min-width: 1400px) {
+  .meet-section .container .part-one {
+    flex-direction: row;
+    text-align: start;
+  }
+}
+.meet-section .container .part-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-left: 25px;
+}
+@media (min-width: 768px) {
+  .meet-section .container .part-two {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+@media (min-width: 992px) {
+  .meet-section .container .part-two {
+    margin-left: 100px;
+  }
+}
+@media (min-width: 1200px) {
+  .meet-section .container .part-two {
+    margin-left: 160px;
+  }
+}
+@media (min-width: 1400px) {
+  .meet-section .container .part-two {
+    margin-left: 0px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+  }
+}
+.meet-section .container .round-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.meet-section .container .round-buttons a {
+  text-decoration: none;
+  color: #191919;
+  font-size: 12px;
+  opacity: 0.3;
+}
+.meet-section .container .round-buttons a.active, .meet-section .container .round-buttons a:hover {
+  opacity: 1;
+}
+
+.testimonial-section {
+  background: #F0D082;
+  padding-bottom: 120px;
+}
+.testimonial-section .container {
+  background-color: white;
+  text-align: center;
+  padding: 120px 120px;
+}
+.testimonial-section .container h2 {
+  margin-top: 35px;
+  margin-bottom: 100px;
+}
+@media (min-width: 1400px) {
+  .testimonial-section .container {
+    max-width: 1520px;
+  }
+}
+.testimonial-section .container .reviews {
+  display: flex;
+  justify-content: space-between;
+  text-align: start;
+}
+.testimonial-section .container .reviews .content-box {
+  max-width: 325px;
+  max-height: 310px;
+  margin-bottom: 100px;
+}
+.testimonial-section .container .reviews .content-box .review-text {
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+.testimonial-section .container .reviews .content-box .stars {
+  font-size: 14px;
+  color: #F94D1C;
+  margin-bottom: 30px;
+}
+.testimonial-section .container .reviews .content-box .reviewers {
+  display: flex;
+}
+.testimonial-section .container .reviews .content-box .reviewers img {
+  margin-right: 20px;
 }
 
 .contact-showcase {
