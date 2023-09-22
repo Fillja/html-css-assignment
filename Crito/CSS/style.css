@@ -502,35 +502,30 @@ header .container .menu-bars {
   margin-bottom: 120px;
 }
 .about-section .container .about-company .btn-black {
+  margin-right: 0px;
   display: block;
+  margin-bottom: 25px;
 }
 @media (min-width: 576px) {
   .about-section .container .about-company .btn-black {
     display: inline;
+    margin-right: 30px;
+    margin-bottom: 0px;
   }
 }
 .about-section .container .about-company .video-button {
-  display: block;
   text-decoration: none;
   color: #191919;
   font-weight: 600;
-  margin-bottom: 25px;
-  margin-top: 20px;
-}
-@media (min-width: 576px) {
-  .about-section .container .about-company .video-button {
-    display: inline;
-  }
 }
 .about-section .container .about-company .video-button i {
   border: 1px solid #191919;
   border-radius: 100%;
-  width: 48px;
-  height: 48px;
-  padding: 15px;
-  text-align: center;
-  margin-left: 40px;
+  width: 55px;
+  height: 55px;
+  padding: 18px;
   margin-right: 20px;
+  text-align: center;
 }
 .about-section .container .about-company .video-button:hover {
   text-decoration: underline;
@@ -973,6 +968,52 @@ header .container .menu-bars {
   margin-top: 10px;
 }
 
+.signup-section {
+  padding: 105px 0px;
+  background-color: #F0EFE9;
+  position: relative;
+  z-index: 0;
+}
+.signup-section .squiggly-lines {
+  right: 0;
+  bottom: 3rem;
+  z-index: -1;
+}
+.signup-section .container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  .signup-section .container {
+    flex-direction: row;
+  }
+}
+.signup-section .container h2 {
+  text-align: center;
+}
+.signup-section .container .subscribe {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 576px) {
+  .signup-section .container .subscribe {
+    flex-direction: row;
+  }
+}
+.signup-section .container .subscribe form {
+  text-align: center;
+}
+.signup-section .container .subscribe form input {
+  width: 308px;
+  padding: 15px;
+  border-radius: 40px;
+  border: hidden;
+}
+
 .contact-showcase {
   background-color: #F0EFE9;
   padding: 114px 0px;
@@ -1009,8 +1050,10 @@ header .container .menu-bars {
   font-size: 56px;
 }
 
-.contact-form {
-  padding-bottom: 125px;
+@media (min-width: 576px) {
+  .contact-form {
+    padding-bottom: 125px;
+  }
 }
 .contact-form .info {
   display: block;
@@ -1141,4 +1184,101 @@ header .container .menu-bars {
 .contact-map iframe {
   width: 100%;
   height: 620px;
+}
+
+footer {
+  background-color: #0E1021;
+  color: white;
+}
+footer .top-footer {
+  padding-top: 115px;
+  padding-bottom: 90px;
+  position: relative;
+  z-index: 0;
+}
+footer .top-footer .squiggly-lines {
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+footer .top-footer .container .footer-menu {
+  display: flex;
+  justify-content: space-between;
+}
+footer .top-footer .container .footer-menu p {
+  display: none;
+}
+@media (min-width: 992px) {
+  footer .top-footer .container .footer-menu p {
+    display: block;
+    max-width: 300px;
+    margin-top: 35px;
+  }
+}
+footer .top-footer .container .footer-menu .link-list {
+  display: none;
+}
+@media (min-width: 992px) {
+  footer .top-footer .container .footer-menu .link-list {
+    display: block;
+  }
+}
+footer .top-footer .container .footer-menu .link-list h3 {
+  margin-bottom: 50px;
+}
+footer .top-footer .container .footer-menu .link-list a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 25px;
+}
+footer .top-footer .container .footer-menu .link-list a:hover {
+  text-decoration: underline;
+  color: hotpink;
+}
+footer .top-footer .container .footer-menu .menu-bars {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 25px;
+}
+@media (min-width: 992px) {
+  footer .top-footer .container .footer-menu .menu-bars {
+    display: none;
+  }
+}
+footer .footer-border {
+  border: solid 1px rgba(69, 69, 69, 0.5647058824);
+}
+footer .bottom-footer {
+  padding: 35px 0px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+}
+@media (min-width: 992px) {
+  footer .bottom-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+footer .bottom-footer p {
+  margin: 0;
+  font-size: 14px;
+  color: hotpink;
+}
+@media (min-width: 576px) {
+  footer .bottom-footer p {
+    font-size: 16px;
+    color: white;
+  }
+}
+footer .bottom-footer .social-media a {
+  color: white;
+  font-size: 1.3rem;
+  margin-left: 25px;
+}
+footer .bottom-footer .social-media a:hover {
+  color: hotpink;
 }

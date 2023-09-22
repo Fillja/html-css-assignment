@@ -238,10 +238,6 @@ header{
                             bottom: -3px;
                             transform: translate((calc(50% - 15px)));
                         }
-
-                        // &:hover{
-                        //     text-decoration: underline;
-                        // }
                     }
                 }
                 
@@ -559,34 +555,30 @@ header{
             }
 
             .btn-black{
+                margin-right: 0px;
                 display: block;
-                
+                margin-bottom: 25px;
+
                 @media (min-width: 576px){
                     display: inline;
+                    margin-right: 30px;
+                    margin-bottom: 0px;
                 }
             }
 
             .video-button{
-                display: block;
                 text-decoration: none;
                 color: #191919;
                 font-weight: 600;
-                margin-bottom: 25px;
-                margin-top: 20px;
-
-                @media (min-width: 576px){
-                    display: inline;
-                }
 
                 i{
                     border: 1px solid #191919;
                     border-radius: 100%;
-                    width: 48px;
-                    height: 48px;
-                    padding: 15px;
-                    text-align: center;
-                    margin-left: 40px;
+                    width: 55px;
+                    height: 55px;
+                    padding: 18px;
                     margin-right: 20px;
+                    text-align: center;
                 }
 
                 &:hover{
@@ -1085,6 +1077,58 @@ header{
 
 }
 
+.signup-section{
+    padding: 105px 0px;
+    background-color: #F0EFE9;
+    position: relative;
+    z-index: 0;
+
+    .squiggly-lines{
+        right: 0;
+        bottom: 3rem;
+        z-index: -1;
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        
+        @media (min-width: 1200px){
+            flex-direction: row;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        .subscribe{
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-direction: column;
+
+            @media (min-width: 576px){
+                flex-direction: row;
+            }
+
+            form{
+                text-align: center;
+
+                input{
+                    width: 308px;
+                    padding: 15px;
+                    border-radius: 40px;
+                    border: hidden;
+                }
+            }
+        }
+    }
+}
+
+// CONTACT.HTML
+
 .contact-showcase{
     background-color:#F0EFE9;
     padding: 114px 0px;
@@ -1126,7 +1170,9 @@ header{
 }
 
 .contact-form{
-    padding-bottom: 125px;
+    @media (min-width: 576px){
+        padding-bottom: 125px;
+    }
 
     .info{
         display: block;
@@ -1266,4 +1312,124 @@ header{
         width: 100%;
         height: 620px;
     }
+}
+
+// END CONTACT.HTML
+
+footer{
+    background-color: #0E1021;
+    color: white;
+
+    .top-footer{
+        padding-top: 115px;
+        padding-bottom: 90px;
+        position: relative;
+        z-index: 0;
+
+        .squiggly-lines{
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+        }
+
+        .container{
+            
+            .footer-menu{
+                display: flex;
+                justify-content: space-between;
+
+                p{
+                    display: none;
+
+                    @media(min-width: 992px){
+                        display: block;
+                        max-width: 300px;
+                        margin-top: 35px;
+                    }
+
+                }
+
+                .link-list{
+                    display: none;
+
+                    @media (min-width: 992px){
+                        display: block;
+                    }
+
+                    h3{
+                        margin-bottom: 50px;
+                    }
+
+                    a{
+                        display: block;
+                        text-decoration: none;
+                        color: white;
+                        margin-bottom: 25px;
+
+                        &:hover{
+                            text-decoration: underline;
+                            color: hotpink;
+                        }
+                    }
+                }
+
+                .menu-bars{
+                    border: none;
+                    background-color: transparent;
+                    color: white;
+                    font-size: 25px;
+
+                    @media (min-width: 992px){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-border{
+        border: solid 1px #45454590;
+    }
+
+    .bottom-footer{
+        padding: 35px 0px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+
+        @media (min-width: 992px){
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+
+        p{
+            margin: 0;
+            font-size: 14px;
+
+            // This is for you, Joakim
+            color: hotpink;
+
+            @media (min-width: 576px){
+                font-size: 16px;
+                color: white;
+            }
+        }
+
+        .social-media{ 
+
+            a{
+                color: white;
+                font-size: 1.3rem;
+                margin-left: 25px;
+
+                // This is for you, Joakim
+                &:hover{
+                    color: hotpink;
+                }
+            }
+        }
+    }
+    
 }
