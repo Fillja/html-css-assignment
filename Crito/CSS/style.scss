@@ -52,6 +52,8 @@ html, body{
     font-size: 16px;
     border-radius: 30px;
 
+    transition: all 300ms ease-in-out;
+
     i{
         margin-left: 8px;
         font-size: 0.9em;   
@@ -73,6 +75,8 @@ html, body{
     font-weight: 600;
     font-size: 16px;
     border-radius: 30px;
+
+    transition: all 300ms ease-in-out;
 
     i{
         margin-left: 8px;
@@ -96,6 +100,8 @@ html, body{
     font-size: 16px;
     border-radius: 30px;
 
+    transition: all 300ms ease-in-out;
+
     i{
         margin-left: 8px;
         font-size: 0.9em;   
@@ -106,6 +112,10 @@ html, body{
         border-color: #191919;
         color: #F0EFE9;
     }
+}
+
+.transition{
+    transition: all 300ms ease-in-out;
 }
 
 .round-buttons{
@@ -179,11 +189,21 @@ header{
                     }
 
                     .content-box{
-                        padding-right: 30px;
-                        margin-right: 30px;
                         border-right: 1px solid #DAD9D3;
-                        font-family: 'Inter', sans-serif;
-                        font-size: 15px;
+                        padding-right: 30px;
+
+                        a{
+                            margin-left: 30px;
+                            font-family: 'Inter', sans-serif;
+                            color: #191919;
+                            font-size: 15px;
+                            text-decoration: none;                     
+
+                            &:hover{
+                                text-decoration: underline;
+                                color: #7b7b7b;
+                            }
+                        } 
 
                         i{
                             margin-right: 5px;
@@ -350,6 +370,11 @@ header{
 .features-section{
 
     .container{
+        
+        // Ändrar storlek på container för att kunna breda ut bordern
+        @media (min-width: 1400px){
+            max-width: 1520px;
+        }
 
         .partners{
             display: flex;
@@ -363,10 +388,13 @@ header{
                 flex-direction: row;
                 margin: 100px 45px;
             }
+            @media (min-width: 1400px){
+                margin: 100px 100px;
+            }
 
             a{
                 &:hover{
-                    background-color: #f9d783;
+                    opacity: 0.5;
                 }
 
                 @media (max-width: 992px){
@@ -381,7 +409,6 @@ header{
 
             @media (min-width: 1400px){
                 border: 1px solid #DAD9D3;
-                width: 1320px;
                 height: 600px;
             }
 
@@ -398,6 +425,10 @@ header{
                     margin-left: 100px;
                     margin-bottom: 216px;
                     margin-top: 81px;
+                }
+
+                @media (min-width: 1400px){
+                    margin-left: 100px;
                 }
 
                 p{
@@ -441,6 +472,10 @@ header{
                 @media (min-width: 1200px){
                     display: flex;
                     margin-top: 81px;
+                }
+
+                @media (min-width: 1400px){
+                    margin-right: 100px;
                 }
 
                 .icons-right{
@@ -610,6 +645,10 @@ header{
 
         @media(min-width: 1400px){
             text-align: start;
+        }
+
+        h2{
+            margin-bottom: 50px;
         }
 
         .services-box{
@@ -790,7 +829,9 @@ header{
                 color: #191919;
 
                 &:hover{
-                    background-color: #f9d783;
+                    img{
+                        opacity: 0.5;
+                    }
 
                     p{
                         text-decoration: underline;
@@ -1053,8 +1094,11 @@ header{
                 }
 
                 &:hover{
-                    background-color: #f9d783;
                     text-decoration: underline;
+
+                    img{
+                        opacity: 0.5;
+                    }
                 }
 
                 .absolute-date{
@@ -1127,7 +1171,7 @@ header{
     }
 }
 
-// CONTACT.HTML
+// CONTACT.HTML BÖRJAR
 
 .contact-showcase{
     background-color:#F0EFE9;
@@ -1226,6 +1270,8 @@ header{
                 color: #191919;
                 font-family: 'Inter', sans-serif;
                 font-size: 14px;
+                // Begränsar width så hover inte aktiverar utanför elementet.
+                width: max-content;
 
                 @media (min-width: 1400px){
                     font-size: 18px;
@@ -1233,7 +1279,7 @@ header{
                 }
 
                 &:hover{
-                    background-color: #f9d783;
+                    color: #7b7b7b;
                     text-decoration: underline;
                 }
 
@@ -1314,7 +1360,7 @@ header{
     }
 }
 
-// END CONTACT.HTML
+// CONTACT.HTML SLUTAR
 
 footer{
     background-color: #0E1021;
@@ -1353,7 +1399,8 @@ footer{
                     display: none;
 
                     @media (min-width: 992px){
-                        display: block;
+                        display: flex;
+                        flex-direction: column;
                     }
 
                     h3{
@@ -1361,10 +1408,11 @@ footer{
                     }
 
                     a{
-                        display: block;
                         text-decoration: none;
                         color: white;
                         margin-bottom: 25px;
+                        // Begränsar width så hover inte aktiverar utanför elementet.
+                        width: max-content;
 
                         &:hover{
                             text-decoration: underline;
