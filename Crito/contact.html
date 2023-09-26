@@ -10,7 +10,8 @@
 </head>
 <body>
 
-    <!-- HEADER SECTION -->
+    <!-- HEADER -->
+    <!-- Kommentarer finns i index.html header -->
     <header>
         <div class="container">
             <a href="index.html"><img src="images/logo.svg" alt="crito logotype"></a>
@@ -48,6 +49,7 @@
         </div>
     </header>
 
+    <!-- MAIN -->
     <main>
 
         <!-- CONTACT SHOWCASE SECTION -->
@@ -56,7 +58,8 @@
             <div class="container">
                 <div>
                     <a href="index.html">Home</a>
-                    <a id="contact" href="contact.html">Contact</a>
+                    <!-- Anger klass "active" som stylas i fetstil -->
+                    <a class="active" href="contact.html">Contact</a>
                 </div>
                 <h1>Let's connect</h1>
             </div>
@@ -64,6 +67,7 @@
 
         <!-- CONTACT FORM SECTION -->
         <section class="contact-form">
+            <!-- Container nummer 1, anger klass "info" för att styla den separat -->
             <div class="info container">
                 <div class="columns">
                     <i class="fa-solid fa-location-dot"></i>
@@ -92,18 +96,22 @@
                     </div>
                 </div>
             </div>  
-            <div class="form-section container">
+            <!-- Container nummer 2, anger klass "form-part" för att styla den separat -->
+            <div class="form-part container">
+                <!-- Provar att använda </br> for science! -->
                 <h2>Leave us a message </br> for any information.</h2>
-                <form>
-                    <!-- LAGT TILL LABEL FÖR TILLGÄNLIGHET ÅT SKÄRMLÄSARE -->
-                    <label for="name">Name</label></br>
-                    <input type="text" name="name" placeholder="Name*"/></br>
-                    <label for="email">Email</label></br>
-                    <input type="text" name="email" placeholder="Email*"/></br>
-                    <label for="message">Your Message</label></br>
-                    <input id="your-message" type="text" name="message" placeholder="Your Message*"/></br>
+                <!-- Använder method post för att skydda email & namn -->
+                <form method="post">
+                    <!-- Lagt till label för tillgänglighet & screenreaders -->
+                    <label for="form-name">Name</label></br>
+                    <input id="form-name" type="text" name="name" placeholder="Name*"/></br>
+                    <label for="form-email">Email</label></br>
+                    <input id="form-email" type="email" name="email" placeholder="Email*"/></br>
+                    <label for="form-message">Your Message</label></br>
+                    <textarea id="form-message" name="message" placeholder="Your Message*"></textarea></br>
+                    <button type="submit" class="btn-yellow" href="#">Send Message<i class="fa-regular fa-arrow-up-right"></i></button>
                 </form>
-                <a class="btn-yellow" href="#">Send Message<i class="fa-regular fa-arrow-up-right"></i></a>
+                
             </div>
         </section>
 
@@ -114,6 +122,8 @@
 
     </main>
 
+    <!-- FOOTER -->
+    <!-- Kommentarer finns i index.html footer -->
     <footer>
         <section class="top-footer">
             <img class="squiggly-lines" src="/images/footer-lines.svg" alt="">

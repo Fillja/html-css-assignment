@@ -1,3 +1,7 @@
+<!-- DETTA PROJEKT ÄR GJORT I SAMARBETE MED JOHAN ÅSTRÖM. -->
+<!-- KODEN KOMMER VARA VÄLDIGT SNARLIK. -->
+<!-- VI HAR ARBETAT SOM ETT TEAM, OCH DET HAR VARIT VÄLDIGT GIVANDE. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +18,9 @@
     <header>
         <div class="container">
             <a href="index.html"><img src="images/logo.svg" alt="crito logotype"></a>
+            <!-- Menu-bars syns enbart vid mobil-läge -->
             <button class="menu-bars"><i class="fa-solid fa-bars"></i></button>
+            <!-- "Menu" delas upp i två delar, "top-menu" och "main-menu" -->
             <div class="menu">
                 <div class="top-menu">
                     <div class="contact-info">
@@ -37,11 +43,13 @@
                 </div>
                 <div class="main-menu">
                     <nav>
+                        <!-- Anger klass "active" för fetstil av nuvarande sida -->
                         <a class="active" href="index.html">Home</a>
                         <a href="#">Service</a>
                         <a href="#">News</a>
                         <a href="contact.html">Contact</a>
                     </nav>
+                    <!-- Anger btn-login klass för att styla knappen individuellt -->
                     <a class="btn-yellow btn-login" href="#">Login<i class="fa-regular fa-arrow-up-right"></i></a>
                 </div>
             </div>
@@ -66,6 +74,7 @@
         </section>
 
         <!-- FEATURES SECTION -->
+        <!-- Anger ID till sektionen för att kunna länka från footer -->
         <section class="features-section" id="features-section"> 
             <div class="container">
                 <div class="partners">
@@ -76,12 +85,15 @@
                     <a href="#"><img src="images/gobona-logo.svg" alt="Gobona logotype"></a>
                 </div>
                 <div class="features">
+                    <!-- Features delas upp i två children för att kunna utnyttja flex -->
                     <div class="part-one">
                         <p class="orange-p">Features</p>
                         <h2>Our Accounting is trusted by thousands of companies</h2>
                         <a class="btn-yellow" href="#">Learn More<i class="fa-regular fa-arrow-up-right"></i></a>
                     </div>
                     <div class="part-two">
+                        <!-- Delar upp boxarna i två kolumner (icons-left och icons-right) -->
+                        <!-- för att lättare hantera responsivitet -->
                         <div class="icons-left">
                             <div>
                                 <i class="fa-regular fa-handshake"></i>
@@ -112,10 +124,12 @@
         </section>
 
         <!-- ABOUT SECTION -->
+        <!-- Anger ID till sektionen för att kunna länka från footer -->
         <section class="about-section" id="about-section">
+            <!-- Delar upp container i två children för hantering av positionering -->
             <div class="container">
                 <div class="samantha">
-                    <img src="/images/samantha.png" alt="Smiling woman holding a laptop while walking down office hallway">
+                    <img src="/images/samantha.png" alt="Smiling woman holding a laptop while walking down an office hallway">
                     <div class="samantha-info">
                         <div>
                             <h4>Samantha Brown,</h4>
@@ -147,24 +161,28 @@
                 </div>
                 <div class="services-box">
                     <a class="transition" href="#"><div>
+                        <!-- Gör en tom div för att få dit strecket ovanför texten -->
                         <div class="border-bit"></div>
                         <h3>Business Advice</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus.</p>
                         <div class="end-content"><i class="fa-regular fa-arrow-right transition"></i></div>
                     </div></a>
                     <a class="transition" href="#"><div>
+                        <!-- Gör en tom div för att få dit strecket ovanför texten -->
                         <div class="border-bit"></div>
                         <h3>Startup Business</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus.</p>
                         <div class="end-content"><i class="fa-regular fa-arrow-right transition"></i></div>
                     </div></a>
                     <a class="transition" href="#"><div>
+                        <!-- Gör en tom div för att få dit strecket ovanför texten -->
                         <div class="border-bit"></div>
                         <h3>Financial Advice</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus.</p>
                         <div class="end-content"><i class="fa-regular fa-arrow-right transition"></i></div>
                     </div></a>
                     <a class="transition" href="#"><div>
+                        <!-- Gör en tom div för att få dit strecket ovanför texten -->
                         <div class="border-bit"></div>
                         <h3>Risk Management</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus.</p>
@@ -178,10 +196,12 @@
         <!-- CHOOSE US SECTION -->
         <section class="choose-us-section">
             <div class="container">
+                <!-- Delar upp parent i bitar. Separat titel-bit och fyra headline-boxar -->
                 <div class="why-choose-us">
                     <p class="orange-p">Why Choose Us</p>
                     <h2>Why We Are The Best Business Consulting Agency</h2>
                     <div class="headlines">
+                        <!-- Icon ligger utanför <div> så den hamnar bredvid, ej över -->
                         <i class="fa-light fa-thumbs-up"></i>
                         <div>
                             <h3>Process Excellence</h3>
@@ -189,6 +209,7 @@
                         </div>
                     </div>
                     <div class="headlines">
+                        <!-- Icon ligger utanför <div> så den hamnar bredvid, ej över -->
                         <i class="fa-light fa-gem"></i>
                         <div>
                             <h3>Strategic Planning</h3>
@@ -196,6 +217,7 @@
                         </div>
                     </div>
                     <div class="headlines">
+                        <!-- Icon ligger utanför <div> så den hamnar bredvid, ej över -->
                         <i class="fa-light fa-pen-nib"></i>
                         <div>
                             <h3>Experience Design</h3>
@@ -203,6 +225,7 @@
                         </div>
                     </div>
                     <div class="headlines">
+                        <!-- Icon ligger utanför <div> så den hamnar bredvid, ej över -->
                         <i class="fa-light fa-head-side-gear"></i>
                         <div>
                             <h3>Artificial Intelligence</h3>
@@ -218,12 +241,14 @@
 
         <!-- PROJECTS & CASE STUDIES SECTION -->
         <section class="projects-section">
+            <!-- Container delas upp i två children för enklare hantering av position -->
             <div class="container">
                 <div class="title-part">
                     <p class="orange-p">Projects & Case Studies</p>
                     <h2>Let's Looks Our Global Projects</h2>
                 </div>
                 <div class="project-part">
+                    <!-- Gör varje artikel till en a-länk -->
                     <a href="#">
                         <img class="transition" src="/images/article-1.png" alt="A mans hands reading a business paper">
                         <h3>Grow your business</h3>
@@ -253,7 +278,9 @@
 
         <!-- MEET OUR TEAM SECTION -->
         <section class="meet-section">
+            <!-- Container delas upp i två children för lättare positionering -->
             <div class="container">
+                <!-- Titel-del -->
                 <div class="part-one">
                     <div>
                         <p class="orange-p">Meet Our Team</p>
@@ -261,6 +288,7 @@
                     </div>
                     <a class="btn-transparent" href="#">Browse Services<i class="fa-regular fa-arrow-up-right"></i></a>
                 </div>
+                <!-- Coworker-del -->
                 <div class="part-two">
                     <div>
                         <img src="images/Kristine.png" alt="Portrait of a well dressed woman in an office, smiling">
@@ -295,9 +323,11 @@
 
         <!-- TESTIMONIAL SECTION -->
         <section class="testimonial-section">
+            <!-- Container delas upp i content-children, titel och knapp -->
             <div class="container">
                 <p class="orange-p">Testimonial</p>
                 <h2>What Our Clients Says</h2>
+                <!-- Parent "review" delas upp i tre children "content-box" -->
                 <div class="reviews">
                     <div class="content-box">
                         <div class="stars">
@@ -360,7 +390,9 @@
 
         <!-- ARTICLE & NEWS SECTION -->
         <section class="articles-section">
+            <!-- Container delas upp i tre children -->
             <div class="container">
+                <!-- Titel-del -->
                 <div class="part-one">
                     <div>
                         <p class="orange-p">Articles & News</p>
@@ -368,12 +400,14 @@
                     </div>
                     <a class="btn-transparent" href="#">Browse Articles<i class="fa-regular fa-arrow-up-right"></i></a>
                 </div>
+                <!-- Artikel-del -->
                 <div class="part-two">
                     <a href="#">
                         <img class="transition" src="/images/25mars.png" alt="Woman sitting in a classroom smiling">
                         <p class="business-color">Business</p>
                         <h3>How To Use Digitalization In The Classroom</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
+                        <!-- Skapar div med datum som positioneras på artikeln -->
                         <div class="absolute-date">
                             <h3>25</h3>
                             <p>Mar</p>
@@ -384,6 +418,7 @@
                         <p class="business-color">Business</p>
                         <h3>How To Implement Chat GPT In Your Projects</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
+                        <!-- Skapar div med datum som positioneras på artikeln -->
                         <div class="absolute-date">
                             <h3>17</h3>
                             <p>Mar</p>
@@ -394,12 +429,14 @@
                         <p class="business-color">Business</p>
                         <h3>The Guide To Support Modern CSS Design</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
+                        <!-- Skapar div med datum som positioneras på artikeln  -->
                         <div class="absolute-date">
                             <h3>13</h3>
                             <p>Mar</p>
                         </div>
                     </a>
                 </div>
+                <!-- Sidonavigerings-knappar -->
                 <div class="round-buttons">
                     <a class="active" href="#"><i class="fa-sharp fa-solid fa-circle"></i></a>
                     <a href="#"><i class="fa-sharp fa-solid fa-circle"></i></a>
@@ -416,10 +453,11 @@
                 <img class="squiggly-lines" src="/images/newsletter-lines.svg" alt="">
                 <h2>Get News Updates By Signing Up</h2>
                 <div class="subscribe">
-                    <form>
-                        <input type="text" name="signup" placeholder="username@domain.com"/>
+                    <form method="post">
+                        <label for="signup"></label>
+                        <input type="text" id="signup" name="signup" placeholder="username@domain.com"/>
                     </form>
-                    <a class="btn-yellow" href="#">Subscribe<i class="fa-regular fa-arrow-up-right"></i></a>
+                    <button type="submit" class="btn-yellow" href="#">Subscribe<i class="fa-regular fa-arrow-up-right"></i></button>
                 </div>
         </section>
 
@@ -427,46 +465,54 @@
 
     <!-- FOOTER -->
     <footer>
+        <!-- Footer delas upp i två olika sektioner -->
         <section class="top-footer">
             <img class="squiggly-lines" src="/images/footer-lines.svg" alt="">
-            <div class="container">
-                <div class="footer-menu">
-                    <div>
-                        <a href="index.html"><img src="images/Footer-Logo.svg" alt="crito logotype"></a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat obcaecati voluptas voluptates! Voluptates laborum nam ratione minus necessitatibus, iure praesentium.</p>
-                    </div>
-                    <button class="menu-bars"><i class="fa-solid fa-bars"></i></button>
-                    <div class="link-list">
-                        <h3>Company</h3>
-                        <a href="#about-section">About</a>
-                        <a href="#features-section">Features</a>
-                        <a href="#">Works</a>
-                        <a href="#">Career</a>
-                    </div>
-                    <div class="link-list">
-                        <h3>Help</h3>
-                        <a href="#">Customer Support</a>
-                        <a href="#">Delivery Details</a>
-                        <a href="#">Terms & Conditions</a>
-                        <a href="#">Privacy Policy</a>
-                    </div>
-                    <div class="link-list">
-                        <h3>Resources</h3>
-                        <a href="#">Free eBooks</a>
-                        <a href="#">Development Tutorial</a>
-                        <a href="#">How to - Blog</a>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Youtube Playlist</a>
-                    </div>
-                    <div class="link-list">
-                        <h3>Link</h3>
-                        <a href="#">Free eBooks</a>
-                        <a href="#">Development Tutorial</a>
-                        <a href="#">How to - Blog</a>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Youtube Playlist</a>
-                    </div>
+            <!-- Container delas in i flera children. -->
+            <div class="footer-menu container">
+                <!-- Logotyp-del -->
+                <div>
+                    <a href="index.html"><img src="images/Footer-Logo.svg" alt="crito logotype"></a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat obcaecati voluptas voluptates! Voluptates laborum nam ratione minus necessitatibus, iure praesentium.</p>
+                </div>
+                <button class="menu-bars"><i class="fa-solid fa-bars"></i></button>
+                <!-- Länk-listor. En titel och meny med länkar -->
+                <div class="link-list">
+                    <h3>Company</h3>
+                    <a href="#about-section">About</a>
+                    <a href="#features-section">Features</a>
+                    <a href="#">Works</a>
+                    <a href="#">Career</a>
+                </div>
+                <!-- Länk-listor. En titel och meny med länkar -->
+                <div class="link-list">
+                    <h3>Help</h3>
+                    <a href="#">Customer Support</a>
+                    <a href="#">Delivery Details</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <!-- Länk-listor. En titel och meny med länkar -->
+                <div class="link-list">
+                    <h3>Resources</h3>
+                    <a href="#">Free eBooks</a>
+                    <a href="#">Development Tutorial</a>
+                    <a href="#">How to - Blog</a>
+                    <!-- :) -->
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Youtube Playlist</a>
+                </div>
+                <!-- Länk-listor. En titel och meny med länkar -->
+                <div class="link-list">
+                    <h3>Link</h3>
+                    <a href="#">Free eBooks</a>
+                    <a href="#">Development Tutorial</a>
+                    <a href="#">How to - Blog</a>
+                    <!-- :) -->
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Youtube Playlist</a>
                 </div>
             </div>
         </section>
+        <!-- Skapar div för att infoga border mellan footer-sektionerna -->
         <div class="footer-border"></div>
         <section class="bottom-footer container">
             <p>
